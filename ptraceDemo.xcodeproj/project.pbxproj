@@ -12,6 +12,8 @@
 		215F8632237959BD00F45C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215F8630237959BD00F45C32 /* Main.storyboard */; };
 		215F8634237959BF00F45C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215F8633237959BF00F45C32 /* Assets.xcassets */; };
 		215F8637237959BF00F45C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215F8635237959BF00F45C32 /* LaunchScreen.storyboard */; };
+		215F8641237959EE00F45C32 /* Ptrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 215F8640237959EE00F45C32 /* Ptrace.c */; };
+		215F8645237961CF00F45C32 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F8644237961CF00F45C32 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		215F8633237959BF00F45C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		215F8636237959BF00F45C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		215F8638237959BF00F45C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215F863E237959ED00F45C32 /* ptraceDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ptraceDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		215F863F237959EE00F45C32 /* Ptrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ptrace.h; sourceTree = "<group>"; };
+		215F8640237959EE00F45C32 /* Ptrace.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Ptrace.c; sourceTree = "<group>"; };
+		215F8644237961CF00F45C32 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,14 @@
 			children = (
 				215F862C237959BD00F45C32 /* AppDelegate.swift */,
 				215F862E237959BD00F45C32 /* ViewController.swift */,
+				215F863F237959EE00F45C32 /* Ptrace.h */,
+				215F8640237959EE00F45C32 /* Ptrace.c */,
+				215F8644237961CF00F45C32 /* main.swift */,
 				215F8630237959BD00F45C32 /* Main.storyboard */,
 				215F8633237959BF00F45C32 /* Assets.xcassets */,
 				215F8635237959BF00F45C32 /* LaunchScreen.storyboard */,
 				215F8638237959BF00F45C32 /* Info.plist */,
+				215F863E237959ED00F45C32 /* ptraceDemo-Bridging-Header.h */,
 			);
 			path = ptraceDemo;
 			sourceTree = "<group>";
@@ -96,6 +106,7 @@
 				TargetAttributes = {
 					215F8628237959BD00F45C32 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -136,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				215F862F237959BD00F45C32 /* ViewController.swift in Sources */,
+				215F8641237959EE00F45C32 /* Ptrace.c in Sources */,
+				215F8645237961CF00F45C32 /* main.swift in Sources */,
 				215F862D237959BD00F45C32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,16 +295,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X54BPV8374;
 				INFOPLIST_FILE = ptraceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.7moor.cc.ptraceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ptraceDemo/ptraceDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,16 +317,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X54BPV8374;
 				INFOPLIST_FILE = ptraceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.7moor.cc.ptraceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ptraceDemo/ptraceDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
